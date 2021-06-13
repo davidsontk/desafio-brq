@@ -1,51 +1,17 @@
-package com.desafio.brq.model;
+package com.desafio.brq.dto;
 
-import com.sun.istack.NotNull;
+public class UsuarioDTO {
 
-import javax.persistence.*;
-import java.io.Serializable;
-import java.sql.Timestamp;
-
-@Entity
-@Table(name = "usuario")
-public class Usuario implements Serializable {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    @NotNull
-    @Column(length = 150)
     private String nome;
-
-    @Column(length = 400)
     private String sobrenome;
-
-    @NotNull
-    @Column(name = "data_nascimento")
-    private Timestamp dataNascimento;
-
-    @NotNull
-    @Column(length = 14)
+    private String dataNascimento;
     private String cpf;
-
-    @NotNull
-    @Column(length = 400)
     private String endereco;
-
-    @Column(length = 9)
     private String cep;
-
-    @Column(length = 50)
     private String telefone;
-
-    @NotNull
-    @Column(name = "data_cadastro")
-    private Timestamp dataCadastro;
-
-    @NotNull
-    @Column(name = "ultima_alteracao")
-    private Timestamp ultimaAlteracao;
+    private String dataCadastro;
+    private String ultimaAlteracao;
 
     public Long getId() {
         return id;
@@ -71,11 +37,11 @@ public class Usuario implements Serializable {
         this.sobrenome = sobrenome;
     }
 
-    public Timestamp getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Timestamp dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -111,19 +77,19 @@ public class Usuario implements Serializable {
         this.telefone = telefone;
     }
 
-    public Timestamp getDataCadastro() {
+    public String getDataCadastro() {
         return dataCadastro;
     }
 
-    public void setDataCadastro(Timestamp dataCadastro) {
+    public void setDataCadastro(String dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
 
-    public Timestamp getUltimaAlteracao() {
+    public String getUltimaAlteracao() {
         return ultimaAlteracao;
     }
 
-    public void setUltimaAlteracao(Timestamp ultimaAlteracao) {
+    public void setUltimaAlteracao(String ultimaAlteracao) {
         this.ultimaAlteracao = ultimaAlteracao;
     }
 }
