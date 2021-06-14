@@ -2,8 +2,6 @@ package com.desafio.brq.dto;
 
 import io.swagger.annotations.ApiModelProperty;
 
-import static io.swagger.annotations.ApiModelProperty.AccessMode.*;
-
 public class UsuarioDTO {
 
     private Long id;
