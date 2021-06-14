@@ -1,0 +1,10 @@
+Desafio BRQ
+- Criar uma API, utilizando o Spring Boot.
+
+- Utilizar o banco de dados da sua preferencia, para criar uma tabela com 10 atributos, essa tabela que será utilizada na API.
+
+- A API deve conter os métodos de Insert, Update, Delete e Read dessa tabela.
+
+- A solução deve ter pelo menos 30% de teste unitários.
+
+- Criar uma solução simples no GitHub ou qualquer repositório open source volta à microserviços que utilize a stack Java.
