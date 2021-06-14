@@ -50,7 +50,7 @@ public class UsuarioService {
     }
 
     private Usuario registraDataCadastroAlteracao(Usuario usuario) {
-        usuario.setDataCadastro(usuario.getDataCadastro() == null ? Timestamp.from(Instant.now()) : usuario.getDataCadastro());
+        usuario.setDataCadastro(Timestamp.from(Instant.now()));
         usuario.setUltimaAlteracao(Timestamp.from(Instant.now()));
         return usuario;
     }

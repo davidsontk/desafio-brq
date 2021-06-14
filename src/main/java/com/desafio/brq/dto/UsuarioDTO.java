@@ -1,12 +1,22 @@
 package com.desafio.brq.dto;
 
+import io.swagger.annotations.ApiModelProperty;
+
+import static io.swagger.annotations.ApiModelProperty.AccessMode.*;
+
 public class UsuarioDTO {
 
     private Long id;
+    @ApiModelProperty(required = true)
     private String nome;
     private String sobrenome;
+    @ApiModelProperty(
+            example = "30/08/1996",
+            required = true)
     private String dataNascimento;
+    @ApiModelProperty(required = true)
     private String cpf;
+    @ApiModelProperty(required = true)
     private String endereco;
     private String cep;
     private String telefone;
@@ -17,6 +27,7 @@ public class UsuarioDTO {
         return id;
     }
 
+    @ApiModelProperty(readOnly = true)
     public void setId(Long id) {
         this.id = id;
     }

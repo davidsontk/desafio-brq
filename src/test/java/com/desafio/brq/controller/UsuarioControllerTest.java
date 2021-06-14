@@ -41,5 +41,4 @@ public class UsuarioControllerTest {
         Assertions.assertEquals(listaUsuarioDTOResponseEntity.getStatusCode(), HttpStatus.OK);
     }
 
-
 }
