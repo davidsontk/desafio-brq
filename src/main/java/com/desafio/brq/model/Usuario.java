@@ -1,8 +1,8 @@
 package com.desafio.brq.model;
 
-import com.sun.istack.NotNull;
-
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
@@ -14,22 +14,25 @@ public class Usuario implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotNull
+    @NotNull(message = "Nome é obrigatorio")
+    @NotEmpty(message = "Nome é obrigatorio")
     @Column(length = 150)
     private String nome;
 
     @Column(length = 400)
     private String sobrenome;
 
-    @NotNull
+    @NotNull(message = "Data de nascimento é obrigatorio")
     @Column(name = "data_nascimento")
     private Timestamp dataNascimento;
 
-    @NotNull
+    @NotNull(message = "CPF é obrigatorio")
+    @NotEmpty(message = "CPF é obrigatorio")
     @Column(length = 14)
     private String cpf;
 
-    @NotNull
+    @NotNull(message = "Endereco é obrigatorio")
+    @NotEmpty(message = "Endereco é obrigatorio")
     @Column(length = 400)
     private String endereco;
 
